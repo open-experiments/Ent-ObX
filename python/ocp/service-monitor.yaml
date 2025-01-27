@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: otel-collector-monitor
+  namespace: tme-aix02
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: opentelemetry-collector
+  namespaceSelector:
+    matchNames:
+      - tme-aix02
+  endpoints:
+    - port: metrics
+      interval: 30s
