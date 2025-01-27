@@ -38,4 +38,8 @@ spec:
           address: ':8888'
   mode: deployment
 
-(2) Install Prometheus Operator -> create a Prometheus instance in your tenant namespace with service monitor (see under ocp folder)
+(2) Install Prometheus Operator -> create a Prometheus instance in your tenant namespace with service monitor and role bindings (see all under ocp folder).
+
+(3) Run: pip install -r requirements.txt for getting your dependencies installed.
+
+(4) Run: hw_python.py to get your hello world console presented on webui while generating metrics and traces for your OTEL Collector -> Prometheus Pull 
