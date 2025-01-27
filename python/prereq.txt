@@ -1,0 +1,41 @@
+(1) Install Red Hat build of OpenTelemetry Operator -> create a OTel Collector in your tenant namespace with :
+spec:
+  observability:
+    metrics: {}
+  deploymentUpdateStrategy: {}
+  config:
+    exporters:
+      otlp:
+        endpoint: '0.0.0.0:4317'
+        tls:
+          insecure: true
+      prometheus:
+        enable_open_metrics: true
+        endpoint: '0.0.0.0:8889'
+        resource_to_telemetry_conversion:
+          enabled: true
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            endpoint: '0.0.0.0:4317'
+          http:
+            endpoint: '0.0.0.0:4318'
+    service:
+      pipelines:
+        metrics:
+          exporters:
+            - prometheus
+          receivers:
+            - otlp
+        traces:
+          exporters:
+            - otlp
+          receivers:
+            - otlp
+      telemetry:
+        metrics:
+          address: ':8888'
+  mode: deployment
+
+(2) Install Prometheus Operator -> create a Prometheus instance in your tenant namespace with service monitor (see under ocp folder)
