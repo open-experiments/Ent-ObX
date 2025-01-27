@@ -15,7 +15,7 @@ B. [eBPF-Inside-Out](https://medium.com/open-5g-hypercore/episode-xvii-bkeeper-a
 C. [Observability-101](https://medium.com/open-5g-hypercore/episode-xvi-the-eye-of-the-bee-holder-a8e81be2dfa2) <br>
 
 ## Projects
-1.  WIP
+1.  Python-App-Instrumentation with OTel [WIP]
 2.   ... {Please Reach Us for Interesting Usecases and Interesting Observability & Pro-Active Monitoring Projects}
 
 ## Contact Us
