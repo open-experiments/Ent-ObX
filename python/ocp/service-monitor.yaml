@@ -4,12 +4,13 @@ metadata:
   name: otel-collector-monitor
   namespace: tme-aix02
 spec:
-  selector:
-    matchLabels:
-      app.kubernetes.io/component: opentelemetry-collector
+  endpoints:
+    - interval: 5s
+      port: metrics
   namespaceSelector:
     matchNames:
       - tme-aix02
-  endpoints:
-    - port: metrics
-      interval: 30s
+  selector:
+    matchLabels:
+      app: tme-aix-wb02
+      service.name: fenar-app
