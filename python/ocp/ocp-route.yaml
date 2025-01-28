@@ -1,10 +1,10 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: otel-python-example
+  name: fenar-app
 spec:
   port:
     targetPort: http
   to:
     kind: Service
-    name: otel-python-example
+    name: fenar-app
