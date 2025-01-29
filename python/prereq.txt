@@ -1,19 +1,27 @@
 (1) Install Red Hat build of OpenTelemetry Operator -> create a OTel Collector in your tenant namespace with :
+
 spec:
   observability:
     metrics: {}
   deploymentUpdateStrategy: {}
   config:
     exporters:
-      otlp:
-        endpoint: '0.0.0.0:4317'
-        tls:
-          insecure: true
       prometheus:
-        enable_open_metrics: true
+        const_labels:
+          source: otel
         endpoint: '0.0.0.0:8889'
+        metric_expiration: 180m
+        namespace: tme_obx
         resource_to_telemetry_conversion:
           enabled: true
+        send_timestamps: null
+    processors:
+      batch:
+        send_batch_size: 1024
+        timeout: null
+      memory_limiter:
+        check_interval: 1s
+        limit_mib: 1000
     receivers:
       otlp:
         protocols:
@@ -26,20 +34,34 @@ spec:
         metrics:
           exporters:
             - prometheus
-          receivers:
-            - otlp
-        traces:
-          exporters:
-            - otlp
+          processors:
+            - batch
           receivers:
             - otlp
       telemetry:
+        logs:
+          level: debug
         metrics:
-          address: ':8888'
+          address: '0.0.0.0:8888'
+          level: detailed
   mode: deployment
 
-(2) Install Prometheus Operator -> create a Prometheus instance in your tenant namespace with service monitor and role bindings (see all under ocp folder).
+(2) Install Prometheus Operator -> create a Prometheus instance in your tenant namespace with service monitor:
+spec:
+  endpoints:
+    - interval: 5s
+      port: prometheus
+  namespaceSelector:
+    matchNames:
+      - tme-aix02
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: opentelemetry-collector
+      app.kubernetes.io/instance: tme-aix02.otel-collector
+      app.kubernetes.io/name: otel-collector-collector
+      app.kubernetes.io/part-of: opentelemetry
+      operator.opentelemetry.io/collector-service-type: base
 
 (3) Run: pip install -r requirements.txt for getting your dependencies installed.
 
-(4) Run: hw_python.py to get your hello world console presented on webui while generating metrics and traces for your OTEL Collector -> Prometheus Pull 
+(4) Run: python app to get your self-playing game start and begin generating metric for your OTEL Collector -> Prometheus Pull 
