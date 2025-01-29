@@ -1,3 +1,6 @@
+# Self-playing Number Guess Game with Metrics for OTEL Collector Sink
+# Author: Fatih E. NAR
+#
 import time
 import socket
 import sys
