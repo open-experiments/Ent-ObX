@@ -1,0 +1,5 @@
+# Average game duration
+rate(tme_obx_game_duration_seconds_sum[5m]) / rate(tme_obx_game_duration_seconds_count[5m])
+
+# Histogram quantiles for game duration
+histogram_quantile(0.95, rate(tme_obx_game_duration_seconds_bucket[5m]))
