@@ -6,19 +6,21 @@
 Welcome to the **Telco-ObX** collaborative experimental workspace. <br>
 This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring.
 
-## Article(s)
-Our Project Summary: WIP <br>
-
-Our Other Observability Work & Articles: <br>
-A. [5G-OpenTelemetry-Use](https://medium.com/open-5g-hypercore/5g-open-telemetry-otel-bccf100e753f) <br>
-B. [eBPF-Inside-Out](https://medium.com/open-5g-hypercore/episode-xvii-bkeeper-a23882feb75) <br>
-C. [Observability-101](https://medium.com/open-5g-hypercore/episode-xvi-the-eye-of-the-bee-holder-a8e81be2dfa2) <br>
-
 ## Projects
 1.  [Python-App-Instrumentation with OTel](https://github.com/tme-osx/Telco-ObX/tree/main/python)
 3.   ... {Please Reach Us for Interesting Usecases and Interesting Observability & Pro-Active Monitoring Projects}
 
-## Contact Us
-For collaboration or inquiries about interesting use cases and data mining opportunities, feel free to reach out:
-[Contact](https://www.linkedin.com/in/fenar/)
+## Team
+For collaboration or inquiries about interesting AI/ML use cases and Data-Engineering opportunities, feel free to reach out:<br>
+| **Role**      | **Name**                      | **LinkedIn Profile**                                         | **Geo-Location** |
+|---------------|-------------------------------|-------------------------------------------------------------|------------------|
+| **Founder**   | Fatih E. NAR                  | [LinkedIn](https://www.linkedin.com/in/fenar/)              | Texas            |
+
+## Our Published Work
+
+| Title                                             | Link                                                                                               | Authors                                                       |
+|---------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| 5G with OpenTelemetry| [Read Article](https://medium.com/open-5g-hypercore/5g-open-telemetry-otel-bccf100e753f) | Fatih E. Nar,  Jose Gomez-Selles, Paul Lancaster, Sean Cohen and Others |
+| eBPF Inside-Out                                      | [Read Article](https://medium.com/open-5g-hypercore/episode-xvii-bkeeper-a23882feb75)     |  Dave Tucker, Arkady Kanevsky, Fatih E. NAR and Others                         |
+| Observability 101    | [Read Article](https://medium.com/open-5g-hypercore/episode-xvi-the-eye-of-the-bee-holder-a8e81be2dfa2) | Sean Cohen, Fatih E. NAR, Dave Tucker, Shujaur Mufti and Others                                                  |                 
 
