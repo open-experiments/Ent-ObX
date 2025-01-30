@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/image/logo.png" width="321"/>
+    <img src="https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/image/logo.png" width="300"/>
 </div>
 
 # Telecom Observability eXperiments (Telco-ObX)
