@@ -20,7 +20,7 @@ For collaboration or inquiries about interesting Observability use cases and Dat
 
 | Title                                             | Link                                                                                               | Authors                                                       |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| 5G with OpenTelemetry| [Read Article](https://medium.com/open-5g-hypercore/5g-open-telemetry-otel-bccf100e753f) | Fatih E. Nar,  Jose Gomez-Selles, Paul Lancaster, Sean Cohen and Others |
+| 5G with OpenTelemetry| [Read Article](https://medium.com/open-5g-hypercore/5g-open-telemetry-otel-bccf100e753f) | Fatih E. Nar, Paul Lancaster, Sean Cohen and Others |
 | eBPF Inside-Out                                      | [Read Article](https://medium.com/open-5g-hypercore/episode-xvii-bkeeper-a23882feb75)     |  Dave Tucker, Arkady Kanevsky, Fatih E. NAR and Others                         |
 | Observability 101    | [Read Article](https://medium.com/open-5g-hypercore/episode-xvi-the-eye-of-the-bee-holder-a8e81be2dfa2) | Sean Cohen, Fatih E. NAR, Dave Tucker, Shujaur Mufti and Others                                                  |                 
 
