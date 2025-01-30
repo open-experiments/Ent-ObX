@@ -11,7 +11,7 @@ This repository is dedicated to observing PaaS/CaaS layer(s) together with Appli
 3.   ... {Please Reach Us for Interesting Usecases and Interesting Observability & Pro-Active Monitoring Projects}
 
 ## Team
-For collaboration or inquiries about interesting AI/ML use cases and Data-Engineering opportunities, feel free to reach out:<br>
+For collaboration or inquiries about interesting Observability use cases and Data-Engineering opportunities, feel free to reach out:<br>
 | **Role**      | **Name**                      | **LinkedIn Profile**                                         | **Geo-Location** |
 |---------------|-------------------------------|-------------------------------------------------------------|------------------|
 | **Founder**   | Fatih E. NAR                  | [LinkedIn](https://www.linkedin.com/in/fenar/)              | Texas            |
