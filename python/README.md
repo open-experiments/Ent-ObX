@@ -8,9 +8,14 @@ Objective: AI app developers can leverage opentelemetry with k8s as aggregated m
 [2] requirements.txt , these are the sw packages needs to be installed for sample app to run. Ie pip install -r requirements.txt <br>
 [3] number-game.py , auto-play number guessing game that generates metrics and shipped to otel-collector <br>
 
+## IDE RHOAI-Workbench Notebook View
+
+![](https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/python/images/notebook.png)
+
 ## Prometheus Pulled Data from OTel via Prometheus Exporter
 
 ![Prometheus Pulled Data](https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/python/images/prometheus_pulled_metrics.png)
+![Sample Graph](https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/python/images/figure2.png)
 
 
 
