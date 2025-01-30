@@ -7,8 +7,8 @@ Welcome to the **Telco-ObX** collaborative experimental workspace. <br>
 This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring and Data Harvesting.
 
 ## Projects
-1.  [Python-App Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python)
-3.   ... {Please Reach Us for Interesting Usecases and Interesting Observability & Pro-Active Monitoring Projects}
+1.  [Python Direct Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python)
+2.  [Java Auto Instrumentation -WiP-]
 
 ## Team
 For collaboration or inquiries about interesting Observability use cases and Data-Engineering opportunities, feel free to reach out:<br>
