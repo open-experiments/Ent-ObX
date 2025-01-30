@@ -14,6 +14,7 @@ This repository is dedicated to observing PaaS/CaaS layer(s) together with Appli
 For collaboration or inquiries about interesting Observability use cases and Data-Engineering opportunities, feel free to reach out:<br>
 | **Role**      | **Name**                      | **LinkedIn Profile**                                         | **Geo-Location** |
 |---------------|-------------------------------|-------------------------------------------------------------|------------------|
+| **Maintainers**   | TBD                  |               |             |
 | **Founder**   | Fatih E. NAR                  | [LinkedIn](https://www.linkedin.com/in/fenar/)              | Texas            |
 
 ## Our Published Work
