@@ -1,6 +1,6 @@
 ## Python Application Metrics -> OTel -> Prometheus
 
-Objective: AI app developers can leverage opentelemetry with k8s as aggregated middle-layer to ship/sink their data to, from otel as common ground -> data can be exported to where-ever data consumers can get it from as final persistant place.
+**Objective:** AI app developers can leverage opentelemetry with k8s as **aggregated middle-layer** to ship/sink their data to, from otel as **common data framework** -> data can be exported to where-ever data consumers can get it from as final persistant place.
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/python/images/arch.png" width="800"/>
