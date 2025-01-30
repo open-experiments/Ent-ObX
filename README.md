@@ -4,7 +4,7 @@
 
 # Telecom Observability eXperiments (Telco-ObX)
 Welcome to the **Telco-ObX** collaborative experimental workspace. <br>
-This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring.
+This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring and Data Harvesting.
 
 ## Projects
 1.  [Python-App Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python)
