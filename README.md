@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/image/logo.png" width="300"/>
 </div>
 
-# Telecom Observability eXperiments (Telco-ObX)
+# Enterprise Observability eXperiments (Telco-ObX)
 Welcome to the **Telco-ObX** collaborative experimental workspace. <br>
 This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring and Data Harvesting.
 
