@@ -47,8 +47,8 @@ Interested in cutting-edge observability and data engineering? Connect with our 
 
 | **Role** | **Name** | **LinkedIn** | **Location** |
 |----------|----------|--------------|--------------|
-| **Product Management** | Jamie Parker | [LinkedIn Profile](https://www.linkedin.com/in/jamiecprince/) | Texas, USA |
 | **Founder** | Fatih E. NAR | [LinkedIn Profile](https://www.linkedin.com/in/fenar/) | Texas, USA |
+| **Product Management** | Jamie Parker | [LinkedIn Profile](https://www.linkedin.com/in/jamiecprince/) | Texas, USA |
 | **Maintainers** | *Positions Open* | - | - |
 
 ## Published Works
