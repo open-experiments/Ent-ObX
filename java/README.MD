@@ -146,6 +146,7 @@ oc get servicemonitor otel-collector-monitor -n tme-obx -o yaml
 ```
 Navigate to: Status -> Targets in your Prometheus UI
 ```
+![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/target.png)<br>
 
 ## Notes
 
