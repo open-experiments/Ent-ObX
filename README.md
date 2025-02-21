@@ -7,7 +7,7 @@ Welcome to the **ObX** collaborative experimental workspace. <br>
 This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring and Data Harvesting.
 
 ## Projects
-1.  [Python-Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python)
+1.  [Python-Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python): This can be leveraged within Jupyter Notebooks for AI App Stack Detailed Observaility <br>
 2.  [Java-Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/java)
 3.  [eBPF BlackBox Harvesting with OTel Collector -WiP-]
 4.  ...
