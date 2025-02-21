@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: java-workspace-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: java-dev
+spec:
+  containers:
+    - name: java-dev
+      image: registry.access.redhat.com/ubi8/openjdk-17
+      command: ["sleep", "infinity"]  # Keeps the container running
+      volumeMounts:
+        - name: workspace
+          mountPath: /opt/app-root/src/workspace
+  volumes:
+    - name: workspace
+      persistentVolumeClaim:
+        claimName: java-workspace-pvc

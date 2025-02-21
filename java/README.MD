@@ -1,0 +1,160 @@
+# OpenTelemetry Java Game Metrics in OpenShift
+
+This guide demonstrates how to set up a Java application that generates metrics using OpenTelemetry (OTEL) and sends them to Prometheus via the OpenTelemetry Collector in an OpenShift environment.
+
+## Repository Structure
+```
+.
+├── README.md
+├── collector-config.yaml     # OpenTelemetry Collector configuration
+├── service-monitor.yaml      # Prometheus ServiceMonitor configuration 
+├── prometheus-rb.yaml        # Prometheus RBAC configuration
+├── java-deploy.yaml         # Java development pod configuration
+├── pom.xml                  # Maven project configuration
+└── GameSimulator.java       # Main Java application
+```
+
+## Prerequisites
+
+- OpenShift cluster with admin access
+- OpenTelemetry Operator installed
+- Prometheus Operator installed
+- Access to a project/namespace (in this case 'tme-obx')
+
+## Step 1: Create OpenTelemetry Collector
+
+Apply the OpenTelemetry Collector configuration:
+```bash
+oc apply -f collector-config.yaml
+```
+
+See [collector-config.yaml](collector-config.yaml) for the complete configuration.
+
+## Step 2: Create ServiceMonitor and RBAC
+
+1. Apply the ServiceMonitor configuration:
+```bash
+oc apply -f service-monitor.yaml
+```
+
+2. Set up Prometheus RBAC:
+```bash
+oc apply -f prometheus-rb.yaml
+```
+
+See [service-monitor.yaml](service-monitor.yaml) and [prometheus-rb.yaml](prometheus-rb.yaml) for complete configurations.
+
+## Step 3: Create Java Development Environment
+
+Apply the Java pod configuration:
+```bash
+oc apply -f java-deploy.yaml
+```
+
+See [java-deploy.yaml](java-deploy.yaml) for the complete configuration.
+
+Once the pod is running, access it:
+```bash
+oc rsh java-dev
+```
+
+## Step 4: Set Up Java Project
+
+1. Create project structure:
+```bash
+mkdir -p otel-game/src/main/java/com/example/game
+cd otel-game
+```
+
+2. Copy the provided [pom.xml](pom.xml) to your project directory.
+
+## Step 5: Create Java Application
+
+1. Create the GameSimulator class:
+```bash
+mkdir -p src/main/java/com/example/game/
+```
+
+2. Copy the provided [GameSimulator.java](GameSimulator.java) into the created directory.
+
+## Step 6: Build and Run
+
+```bash
+cd /opt/app-root/src/workspace/otel-game
+mvn clean package
+java -jar target/otel-game-1.0-SNAPSHOT.jar
+```
+
+## Step 7: Verify Metrics
+
+1. Check OTEL collector logs:
+```bash
+oc logs -f deployment/otel-collector
+```
+
+2. Query metrics in Prometheus:
+```
+tme_obx_games_total{source="otel"}
+tme_obx_guesses_total{source="otel"}
+tme_obx_guess_distance{source="otel"}
+```
+
+## Configuration Details
+
+### OpenTelemetry Collector
+The collector configuration in [collector-config.yaml](collector-config.yaml) sets up:
+- OTLP receivers on ports 4317 (gRPC) and 4318 (HTTP)
+- Prometheus exporter on port 8889
+- Batch processor for efficient metric handling
+- Memory limiter for resource management
+
+### ServiceMonitor
+The [service-monitor.yaml](service-monitor.yaml) configures Prometheus to:
+- Scrape metrics every 30 seconds
+- Target the collector's prometheus port
+- Match specific OpenTelemetry service labels
+
+### Java Application
+The [GameSimulator.java](GameSimulator.java) implements:
+- OTEL metric generation
+- Game simulation logic
+- Concurrent player handling
+- Metric attribute management
+
+## Troubleshooting
+
+1. Verify the OTEL collector service:
+```bash
+oc get service otel-collector -n tme-obx
+```
+
+2. Check if metrics are exposed:
+```bash
+# From inside the collector pod
+curl localhost:8889/metrics | grep tme_obx
+```
+
+3. Verify ServiceMonitor is correctly configured:
+```bash
+oc get servicemonitor otel-collector-monitor -n tme-obx -o yaml
+```
+
+4. Check Prometheus targets:
+```
+Navigate to: Status -> Targets in your Prometheus UI
+```
+
+## Notes
+
+- The metrics will have the prefix `tme_obx_` as configured in the collector
+- All metrics will have the label `source="otel"`
+- The OTEL collector is accessible at `otel-collector.tme-obx.svc.cluster.local:4317`
+- Prometheus scrapes metrics from port 8889
+
+## Files
+- [collector-config.yaml](collector-config.yaml): OpenTelemetry Collector configuration
+- [service-monitor.yaml](service-monitor.yaml): Prometheus ServiceMonitor configuration
+- [prometheus-rb.yaml](prometheus-rb.yaml): Prometheus RBAC rules
+- [java-deploy.yaml](java-deploy.yaml): Java development pod configuration
+- [pom.xml](pom.xml): Maven project configuration
+- [GameSimulator.java](GameSimulator.java): Main Java application code

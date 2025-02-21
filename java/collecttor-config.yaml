@@ -1,0 +1,44 @@
+apiVersion: opentelemetry.io/v1beta1
+kind: OpenTelemetryCollector
+metadata:
+  name: otel
+  namespace: tme-obx
+spec:
+  config:
+    exporters:
+      prometheus:
+        const_labels:
+          source: otel
+        endpoint: '0.0.0.0:8889'
+        metric_expiration: 180m
+        namespace: tme_obx
+        resource_to_telemetry_conversion:
+          enabled: true
+    processors:
+      batch:
+        send_batch_size: 1024
+      memory_limiter:
+        check_interval: 1s
+        limit_mib: 1000
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            endpoint: '0.0.0.0:4317'
+          http:
+            endpoint: '0.0.0.0:4318'
+    service:
+      pipelines:
+        metrics:
+          exporters:
+            - prometheus
+          processors:
+            - batch
+          receivers:
+            - otlp
+      telemetry:
+        logs:
+          level: debug
+        metrics:
+          address: '0.0.0.0:8888'
+          level: detailed
