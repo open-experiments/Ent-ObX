@@ -6,7 +6,7 @@
 
 Welcome to the **ObX** collaborative experimental workspace – a cutting-edge initiative dedicated to revolutionizing application observability across diverse technology stacks.
 
-### Mission
+## Mission
 
 Our mission is to provide comprehensive observability solutions through:
 - Custom Metrics Collection
