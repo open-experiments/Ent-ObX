@@ -95,7 +95,7 @@ oc logs -f deployment/otel-collector
 
 2. Query metrics in Prometheus:
 
-```
+```bash
 label_replace(
   (sum(rate(tme_obx_games_total{attempts="1"}[5m])) / sum(rate(tme_obx_games_total[5m])) * 100) or vector(0),
   "metric", "success_rate_pct", "", ""
