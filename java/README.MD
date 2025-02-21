@@ -84,6 +84,8 @@ cd /opt/app-root/src/workspace/otel-game
 mvn clean package
 java -jar target/otel-game-1.0-SNAPSHOT.jar
 ```
+![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/java.png)<br>
+
 
 ## Step 7: Verify Metrics
 
