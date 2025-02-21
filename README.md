@@ -4,8 +4,6 @@
 
 # Enterprise Observability eXperiments (ObX)
 
-## Overview
-
 Welcome to the **ObX** collaborative experimental workspace – a cutting-edge initiative dedicated to revolutionizing application observability across diverse technology stacks.
 
 ### Mission
