@@ -30,7 +30,6 @@ public class GameSimulator {
         Resource resource = Resource.getDefault()
             .toBuilder()
             .put("service.name", "game_simulator")
-            .put("source", "otel")
             .build();
 
         OtlpGrpcMetricExporter metricExporter = OtlpGrpcMetricExporter.builder()
@@ -74,12 +73,10 @@ public class GameSimulator {
 
             guessCounter.add(1, Attributes.builder()
                 .put("game_id", gameId)
-                .put("source", "otel")
                 .build());
                 
             guessDistance.record(distance, Attributes.builder()
                 .put("game_id", gameId)
-                .put("source", "otel")
                 .build());
 
             try {
@@ -93,7 +90,6 @@ public class GameSimulator {
         gamesCounter.add(1, Attributes.builder()
             .put("game_id", gameId)
             .put("attempts", attempts)
-            .put("source", "otel")
             .build());
 
         logger.info("Game {} completed in {} attempts", gameId, attempts);
