@@ -16,9 +16,8 @@ This guide demonstrates how to set up a Java application that generates metrics 
 
 ## Prerequisites
 
-- OpenShift cluster with admin access
-- OpenTelemetry Operator installed
-- Prometheus Operator installed
+- OpenShift cluster 
+- OpenTelemetry & Prometheus Operator installed and instances deployed in tenant namespace (here tme-obx)
 - Access to a project/namespace (in this case 'tme-obx')
 
 ## Step 1: Create OpenTelemetry Collector
