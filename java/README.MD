@@ -88,10 +88,9 @@ java -jar target/otel-game-1.0-SNAPSHOT.jar
 
 ## Step 7: Verify Metrics
 
-1. Check OTEL collector logs:
-```bash
-oc logs -f deployment/otel-collector
-```
+1. Check OTELfor receiving the data
+![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/otel.png)
+
 
 2. Query metrics in Prometheus:
 
@@ -138,21 +137,12 @@ The [GameSimulator.java](GameSimulator.java) implements:
 
 ## Troubleshooting
 
-1. Verify the OTEL collector service:
-```bash
-oc get service otel-collector -n tme-obx
-```
-
-2. Check if metrics are exposed:
-![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/otel.png)
-
-
-3. Verify ServiceMonitor is correctly configured:
+1. Verify ServiceMonitor is correctly configured:
 ```bash
 oc get servicemonitor otel-collector-monitor -n tme-obx -o yaml
 ```
 
-4. Check Prometheus targets:
+2. Check Prometheus targets:
 ```
 Navigate to: Status -> Targets in your Prometheus UI
 ```
