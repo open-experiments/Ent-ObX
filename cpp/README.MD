@@ -136,4 +136,3 @@ For specific implementation details, see:
 
 - Application sends metrics to `otel-collector.tme-obx.svc.cluster.local:4317`
 - All builds are done in the persistent volume
-- Uses the same metric names as the Java implementation for consistency
