@@ -95,10 +95,22 @@ oc logs -f deployment/otel-collector
 
 2. Query metrics in Prometheus:
 ```
-tme_obx_games_total{source="otel"}
-tme_obx_guesses_total{source="otel"}
-tme_obx_guess_distance{source="otel"}
+label_replace(
+  (sum(rate(tme_obx_games_total{attempts="1"}[5m])) / sum(rate(tme_obx_games_total[5m])) * 100) or vector(0),
+  "metric", "success_rate_pct", "", ""
+)
+or
+label_replace(
+  (rate(tme_obx_guess_distance_sum[5m]) / rate(tme_obx_guess_distance_count[5m])),
+  "metric", "avg_distance", "", ""
+)
+or
+label_replace(
+  rate(tme_obx_games_total[5m]) * 60,
+  "metric", "games_per_minute", "", ""
+)
 ```
+![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/promo.png)<br>
 
 ## Configuration Details
 
