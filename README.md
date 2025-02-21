@@ -39,7 +39,7 @@ Our mission is to provide comprehensive observability solutions through:
 - Advanced system-level observability
 - Kernel-level insights and telemetry
 
-## 👥 Team
+## Team
 
 ### Collaboration & Inquiries
 
@@ -51,7 +51,7 @@ Interested in cutting-edge observability and data engineering? Connect with our 
 | **Founder** | Fatih E. NAR | [LinkedIn Profile](https://www.linkedin.com/in/fenar/) | Texas, USA |
 | **Maintainers** | *Positions Open* | - | - |
 
-## 📝 Published Works
+## Published Works
 
 | Title | Link | Authors |
 |-------|------|---------|
