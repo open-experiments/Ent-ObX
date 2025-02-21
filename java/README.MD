@@ -94,6 +94,7 @@ oc logs -f deployment/otel-collector
 ```
 
 2. Query metrics in Prometheus:
+
 ```
 label_replace(
   (sum(rate(tme_obx_games_total{attempts="1"}[5m])) / sum(rate(tme_obx_games_total[5m])) * 100) or vector(0),
@@ -110,6 +111,7 @@ label_replace(
   "metric", "games_per_minute", "", ""
 )
 ```
+
 ![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/promo.png)<br>
 
 ## Configuration Details
