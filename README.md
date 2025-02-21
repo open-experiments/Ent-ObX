@@ -15,7 +15,7 @@ Our mission is to provide comprehensive observability solutions through:
 
 > 💡 **Platform Layer Observability**: For platform-level insights, please refer to the [OpenShift Observability Documentation](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
 
-## 🚀 Current Projects
+## Projects
 
 ### 1. Python Instrumentation
 [![Python](https://img.shields.io/badge/Python-Instrumentation-blue?logo=python)](https://github.com/tme-osx/Telco-ObX/tree/main/python)
