@@ -1,6 +1,6 @@
 # OpenTelemetry Java App Metrics in OpenShift
 
-This guide demonstrates how to set up a Java application that generates metrics using OpenTelemetry (OTEL) and sends them to Prometheus via the OpenTelemetry Collector in an OpenShift environment.
+This guide demonstrates how to enrich up a java application that generates metrics using OpenTelemetry (OTEL) and sends them to Prometheus via the OpenTelemetry Collector in an OpenShift environment.
 
 ## Repository Structure
 ```
