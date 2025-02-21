@@ -4,7 +4,8 @@
 
 # Enterprise Observability eXperiments (ObX)
 Welcome to the **ObX** collaborative experimental workspace. <br>
-This repository is dedicated to observing PaaS/CaaS layer(s) together with Application (VNF, CNF etc) Pro-active Monitoring and Data Harvesting.
+This repository is dedicated to observing Applications (VNF, CNF etc) with Custom Metrics and Pro-active Monitoring and Data Harvesting.  <br>
+For Platform layer Observability please refer to -> [OCP-Observability](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
 
 ## Projects
 1.  [Python-Instrumentation](https://github.com/tme-osx/Telco-ObX/tree/main/python): -> To be leveraged within Jupyter Notebooks for AI App Stack Detailed Observability. <br>
