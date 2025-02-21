@@ -1,24 +1,36 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+apiVersion: v1
+kind: ServiceAccount
 metadata:
-  name: prometheus-monitoring
-rules:
-  - apiGroups: [""]
-    resources: ["pods", "services", "endpoints", "nodes"]
-    verbs: ["get", "list", "watch"]
-  - apiGroups: [""]
-    resources: ["namespaces"]
-    verbs: ["get", "list"]
+  name: prometheus
+  namespace: tme-obx
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
+kind: Role
 metadata:
-  name: prometheus-monitoring
-subjects:
-  - kind: ServiceAccount
-    name: prometheus-k8s
-    namespace: tme-obx
+  name: prometheus
+  namespace: tme-obx
+rules:
+- apiGroups: [""]
+  resources:
+  - services
+  - endpoints
+  - pods
+  verbs: ["get", "list", "watch"]
+- apiGroups: ["monitoring.coreos.com"]
+  resources:
+  - servicemonitors
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: prometheus
+  namespace: tme-obx
 roleRef:
-  kind: ClusterRole
-  name: prometheus-monitoring
   apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: prometheus
+subjects:
+- kind: ServiceAccount
+  name: prometheus
+  namespace: tme-obx
