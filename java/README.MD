@@ -131,10 +131,8 @@ oc get service otel-collector -n tme-obx
 ```
 
 2. Check if metrics are exposed:
-```bash
-# From inside the collector pod
-curl localhost:8889/metrics | grep tme_obx
-```
+![](https://raw.githubusercontent.com/open-experiments/ObX/refs/heads/main/java/images/otel.png)
+
 
 3. Verify ServiceMonitor is correctly configured:
 ```bash
