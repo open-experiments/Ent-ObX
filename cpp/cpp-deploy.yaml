@@ -1,3 +1,4 @@
+# cpp-deploy.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -20,7 +21,7 @@ spec:
       command: ["sleep", "infinity"]
       securityContext:
         allowPrivilegeEscalation: true
-        runAsUser: 0  # Run as root to allow dnf
+        runAsUser: 0
       volumeMounts:
         - name: workspace
           mountPath: /opt/app-root/src/workspace
