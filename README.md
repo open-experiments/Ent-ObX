@@ -4,7 +4,7 @@
 
 # Enterprise Observability eXperiments (ObX)
 Welcome to the **ObX** collaborative experimental workspace. <br>
-This repository is dedicated to observing Applications (VNF, CNF etc) with Custom Metrics and Pro-active Monitoring and Data Harvesting.  <br>
+This repository is dedicated to observing Applications (VNF, CNF etc) with Custom Metrics, Pro-active Monitoring and Data Harvesting.  <br>
 <br>PS: For platform layer observability please refer to -> [OCP-Observability](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
 
 ## Projects
