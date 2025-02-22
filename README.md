@@ -4,7 +4,7 @@
 
 # Enterprise Observability eXperiments (ObX)
 Welcome to the **ObX** collaborative experimental workspace. Our mission is to provide ready to use observability examples through:
-- Custom Metrics Collection with code instrumentation
+- Custom Data (Metrics, Events, Logs and Traces -MELT) harvesting & data-pipelines with OTel
 - Advanced Data Harvesting Techniques with eBPF
 
 > 💡 **Platform Layer Observability**: For platform-level insights, please refer to the [OpenShift Observability Documentation](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
