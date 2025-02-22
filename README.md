@@ -3,12 +3,9 @@
 </div>
 
 # Enterprise Observability eXperiments (ObX)
-Welcome to the **ObX** collaborative experimental workspace – a cutting-edge initiative dedicated to revolutionizing application observability across diverse technology stacks.
-
-Our mission is to provide comprehensive observability solutions through:
-- Custom Metrics Collection
-- Pro-active Monitoring Strategies
-- Advanced Data Harvesting Techniques
+Welcome to the **ObX** collaborative experimental workspace. Our mission is to provide ready to use observability examples through:
+- Custom Metrics Collection with code instrumentation
+- Advanced Data Harvesting Techniques with eBPF
 
 > 💡 **Platform Layer Observability**: For platform-level insights, please refer to the [OpenShift Observability Documentation](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
 
@@ -41,8 +38,6 @@ Our mission is to provide comprehensive observability solutions through:
 - Kernel-level insights and telemetry
 
 ## Team
-
-### Collaboration & Inquiries
 Interested in cutting-edge observability and data engineering? Connect with our team!
 
 | **Role** | **Name** | **LinkedIn** | **Location** |
