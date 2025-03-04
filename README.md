@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/tme-osx/Telco-ObX/refs/heads/main/image/logo.png" width="300"/>
 </div>
 
-# Enterprise Observability eXperiments (ObX)
+# Enterprise Observability eXperiments (Ent-ObX)
 Welcome to the **ObX** collaborative experimental workspace. Our mission is to provide ready to use observability examples through:
 - Custom Data (Metrics, Events, Logs and Traces -MELT) harvesting & data-pipelines with OTel
 - Advanced Data Harvesting Techniques with eBPF
