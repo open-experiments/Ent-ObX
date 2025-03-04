@@ -43,6 +43,7 @@ Interested in cutting-edge observability and data engineering? Connect with our 
 | **Role** | **Name** | **LinkedIn** | **Location** |
 |----------|----------|--------------|--------------|
 | **Founder** | Fatih E. NAR | [LinkedIn Profile](https://www.linkedin.com/in/fenar/) | Texas, USA |
+| **Founder** | Frank Brockners | [LinkedIn Profile](https://www.linkedin.com/in/frank-brockners-6751842/) | Cologne Bonn, Germany |
 | **Product Management** | Jamie Parker | [LinkedIn Profile](https://www.linkedin.com/in/jamiecprince/) | Texas, USA |
 | **Maintainers** | *Positions Open* | - | - |
 
