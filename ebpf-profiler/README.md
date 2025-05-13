@@ -15,6 +15,11 @@ We built the custom `ebpf-profiler` binary from the upstream [`open-telemetry/op
 </div>
 
 ```bash
+# To avoid tls timeouts for go dependency downloads
+go mod tidy
+go mod vendor
+go mod download
+
 # Build and push steps from fedora-moccasin-eel-24
 docker build -f Dockerfile.fenar -t efatnar/opentelemetry-ebpf-profiler:latest .
 docker push efatnar/opentelemetry-ebpf-profiler:latest
