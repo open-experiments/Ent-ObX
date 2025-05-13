@@ -26,6 +26,7 @@ spec:
             - "-collection-agent=otelcol-collector:4317"
             - "-disable-tls"
             - "-verbose"
+            - "-map-scale-factor=4"
           volumeMounts:
             - name: sys
               mountPath: /sys
