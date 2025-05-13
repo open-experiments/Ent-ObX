@@ -16,6 +16,7 @@ We built the custom `ebpf-profiler` binary from the upstream [`open-telemetry/op
 
 ```bash
 # To avoid tls timeouts for go dependency downloads
+sudo dnf install -y golang
 go mod tidy
 go mod vendor
 go mod download
