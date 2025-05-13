@@ -58,7 +58,7 @@ oc apply -f deployment.yaml
 
 ### Disclaimer
 
-(1) Red Hat build of OpenTelemetry has not support performance profiling data sink (pprof) yet, therefore you may (?) consider using pyroscope for better observability profiling. 
+(1) Red Hat build of OpenTelemetry does not support (yet) performance profiling data sink (pprof), therefore you may (?) consider using pyroscope for better observability profiling. 
 
 ```
 Error: failed to get config: cannot unmarshal the configuration: 1 error(s) decoding:
