@@ -1,0 +1,39 @@
+apiVersion: opentelemetry.io/v1beta1
+kind: OpenTelemetryCollector
+metadata:
+  name: otelcol
+  namespace: open5gs-monitoring
+spec:
+  mode: deployment
+  image: otel/opentelemetry-collector-contrib:latest
+  replicas: 1
+  config:
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            endpoint: 0.0.0.0:4317
+          http:
+            endpoint: 0.0.0.0:4318
+    exporters:
+      debug:
+        verbosity: detailed
+    service:
+      telemetry:
+        metrics:
+          address: 0.0.0.0:8888
+      pipelines:
+        traces:
+          receivers: [otlp]
+          exporters: [debug]
+  targetAllocator:
+    allocationStrategy: consistent-hashing
+    filterStrategy: relabel-config
+    prometheusCR:
+      scrapeInterval: 30s
+  managementState: managed
+  upgradeStrategy: automatic
+  ingress:
+    route: {}
+  ipFamilyPolicy: SingleStack
+

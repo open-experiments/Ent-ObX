@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ebpf-profiler
+  namespace: open5gs-monitoring
+  labels:
+    app: ebpf-profiler
+spec:
+  selector:
+    matchLabels:
+      app: ebpf-profiler
+  template:
+    metadata:
+      labels:
+        app: ebpf-profiler
+    spec:
+      hostPID: true
+      serviceAccountName: default
+      containers:
+        - name: ebpf-profiler
+          image: efatnar/opentelemetry-ebpf-profiler:latest
+          securityContext:
+            privileged: true
+          command: ["/app/ebpf-profiler"]
+          args:
+            - "-collection-agent=otelcol-collector:4317"
+            - "-disable-tls"
+            - "-verbose"
+          volumeMounts:
+            - name: sys
+              mountPath: /sys
+              readOnly: true
+            - name: modules
+              mountPath: /lib/modules
+              readOnly: true
+            - name: debugfs
+              mountPath: /sys/kernel/debug
+              readOnly: true
+            - name: proc
+              mountPath: /proc
+              readOnly: true
+      volumes:
+        - name: sys
+          hostPath:
+            path: /sys
+        - name: modules
+          hostPath:
+            path: /lib/modules
+        - name: debugfs
+          hostPath:
+            path: /sys/kernel/debug
+        - name: proc
+          hostPath:
+            path: /proc
