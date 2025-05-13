@@ -52,10 +52,12 @@ oc apply -f deployment.yaml
 
 ### Disclaimer
 
-Red Hat build of OpenTelemetry has not support performance profiling data sink (pprof) yet, therefore you may (?) consider using pyroscope for better observability profiling. 
+(1) Red Hat build of OpenTelemetry has not support performance profiling data sink (pprof) yet, therefore you may (?) consider using pyroscope for better observability profiling. 
 
 ```
 Error: failed to get config: cannot unmarshal the configuration: 1 error(s) decoding:
 * error decoding 'receivers': unknown type: "pprof" for id: "pprof" (valid values: [snmp awsxray azureeventhub datadog flinkmetrics pulsar solace syslog redis signalfx apachespark cloudfoundry httpcheck snowflake couchdb filelog hostmetrics riak windowsperfcounters docker_stats iis opencensus receiver_creator sshcheck k8sobjects namedpipe statsd awscloudwatch awscontainerinsightreceiver azureblob journald kafkametrics nginx prometheus_simple vcenter filestats jaeger mongodb oracledb purefb webhookevent zookeeper cloudflare podman_stats prometheus skywalking memcached postgresql purefa splunk_hec sqlquery windowseventlog sapm azuremonitor chrony googlecloudspanner influxdb mongodbatlas nsxt rabbitmq tcplog nop otlp aerospike awsfirehose jmx wavefront collectd loki zipkin active_directory_ds awsecscontainermetrics expvar bigip fluentforward k8s_events kafka kubeletstats sqlserver udplog otlpjsonfile apache carbon elasticsearch googlecloudpubsub haproxy k8s_cluster mysql])
 2025/05/13 22:16:25 collector server run finished with error: failed to get config: cannot unmarshal the configuration: 1 error(s) decoding:
 ```
+
+(2) Object Store is needed to go with Tempo for Traces! We will put some efforts with MinIO standardization with OCP in coming days.
