@@ -4,6 +4,7 @@ metadata:
   name: otelcol-collector
   namespace: open5gs-monitoring
 spec:
+  mode: deployment
   observability:
     metrics: {}
   deploymentUpdateStrategy: {}
@@ -64,4 +65,3 @@ spec:
   ingress:
     route: {}
   ipFamilyPolicy: SingleStack
-

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: otelcol-collector-otlp
+  namespace: open5gs-monitoring
+  labels:
+    app.kubernetes.io/name: otelcol-collector-otlp
+spec:
+  type: ExternalName
+  externalName: otelcol-collector-collector.open5gs-monitoring.svc.cluster.local

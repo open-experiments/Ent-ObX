@@ -23,7 +23,7 @@ spec:
             privileged: true
           command: ["/app/ebpf-profiler"]
           args:
-            - "-collection-agent=otelcol-collector:4317"
+            - "-collection-agent=otelcol-collector-collector:4317"
             - "-disable-tls"
             - "-verbose"
             - "-map-scale-factor=4"
