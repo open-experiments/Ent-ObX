@@ -9,4 +9,4 @@ spec:
     interval: 10s
   selector:
     matchLabels:
-      app.kubernetes.io/name: otelcol
+      app.kubernetes.io/name: otelcol-collector-metrics
