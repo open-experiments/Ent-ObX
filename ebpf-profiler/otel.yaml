@@ -4,28 +4,56 @@ metadata:
   name: otelcol-collector
   namespace: open5gs-monitoring
 spec:
-  mode: deployment
-  image: otel/opentelemetry-collector-contrib:latest
-  replicas: 1
+  observability:
+    metrics: {}
+  deploymentUpdateStrategy: {}
   config:
+    exporters:
+      debug:
+        verbosity: detailed
+      prometheus:
+        endpoint: '0.0.0.0:8889'
+    processors:
+      attributes:
+        actions:
+          - action: upsert
+            key: collector.name
+            value: otelcol-monitoring
+      batch:
+        send_batch_size: 1024
+        timeout: 1s
     receivers:
       otlp:
         protocols:
           grpc:
-            endpoint: 0.0.0.0:4317
+            endpoint: '0.0.0.0:4317'
           http:
-            endpoint: 0.0.0.0:4318
-    exporters:
-      debug:
-        verbosity: detailed
+            endpoint: '0.0.0.0:4318'
     service:
-      telemetry:
-        metrics:
-          address: 0.0.0.0:8888
       pipelines:
+        metrics:
+          exporters:
+            - prometheus
+            - debug
+          processors:
+            - batch
+            - attributes
+          receivers:
+            - otlp
         traces:
-          receivers: [otlp]
-          exporters: [debug]
+          exporters:
+            - debug
+          processors:
+            - batch
+            - attributes
+          receivers:
+            - otlp
+      telemetry:
+        logs:
+          development: true
+          level: debug
+        metrics:
+          address: '0.0.0.0:8888'
   targetAllocator:
     allocationStrategy: consistent-hashing
     filterStrategy: relabel-config
