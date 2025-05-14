@@ -52,6 +52,8 @@ This image is used by the `DaemonSet` to instrument each node in the OpenShift c
 oc apply -f scc.yaml
 oc apply -f otel.yaml
 oc apply -f deployment.yaml
+oc apply -f otel-service.yaml
+oc apply -f otel-servicemonitor.yaml
 ```
 
 ---
