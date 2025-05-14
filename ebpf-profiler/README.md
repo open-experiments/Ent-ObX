@@ -40,19 +40,19 @@ This image is used by the `DaemonSet` to instrument each node in the OpenShift c
 
 | File              | Description                                                               |
 | ----------------- | ------------------------------------------------------------------------- |
-| `deployment.yaml` | Deploys the `ebpf-profiler` as a `DaemonSet` with necessary host mounts   |
-| `otel.yaml`       | Deploys `otelcol` using the OpenTelemetry Operator with OTLP + debug flow |
-| `scc.yaml`        | Adds SCC for privileged eBPF workloads under `open5gs-monitoring` NS      |
+| `ebpfprofiler-daemonset.yaml` | Deploys the `ebpf-profiler` as a `DaemonSet` with necessary host mounts   |
+| `otelcol-collector-deployment.yaml`       | Deploys `otelcol` using the OpenTelemetry Operator with OTLP + debug flow |
+| `ebpf-profiler-scc.yaml`        | Adds SCC for privileged eBPF workloads under `open5gs-monitoring` NS      |
 
 ---
 
 ### 🚀 Quickstart
 
 ```bash
-oc apply -f scc.yaml
-oc apply -f otel.yaml
-oc apply -f deployment.yaml
-oc apply -f otel-service.yaml
+oc apply -f ebpf-profiler-scc.yaml
+oc apply -f otelcol-collector-deployment.yaml
+oc apply -f ebpfprofiler-daemonset.yaml
+oc apply -f otelcol-collector-metrics-service.yaml
 oc apply -f otel-servicemonitor.yaml
 ```
 
