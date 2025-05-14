@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: otelcol-collector-metrics
+  namespace: open5gs-monitoring
+  labels:
+    app.kubernetes.io/name: otelcol
+spec:
+  ports:
+  - name: metrics
+    port: 8889
+    targetPort: 8889
+  selector:
+    app.kubernetes.io/name: otelcol
