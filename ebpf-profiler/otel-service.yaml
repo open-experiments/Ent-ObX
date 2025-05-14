@@ -4,14 +4,11 @@ metadata:
   name: otelcol-collector-metrics
   namespace: open5gs-monitoring
   labels:
-    app.kubernetes.io/name: otelcol-collector
+    app.kubernetes.io/name: otelcol
 spec:
   ports:
   - name: metrics
     port: 8888
     targetPort: 8888
-  - name: grpc
-    port: 4317
-    targetPort: 4317
   selector:
-    app.kubernetes.io/name: otelcol-collector
+    app.kubernetes.io/name: otelcol
