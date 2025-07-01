@@ -32,7 +32,8 @@ Welcome to the **ObX** collaborative experimental workspace. Our mission is to p
 - UBI 8 based OpenShift deployment
 
 ### 4. eBPF BlackBox Harvesting
-[![eBPF](https://img.shields.io/badge/eBPF-Work%20in%20Progress-green)](https://github.com/open-experiments/Ent-ObX/tree/main/ebpf-profiler)
+[![eBPF](https://img.shields.io/badge/eBPF-Instrumentation-darkgreen?logo=linux)](https://github.com/open-experiments/Ent-ObX/tree/main/ebpf-profiler)
+
 **Status**: Work in Progress
 - Advanced system-level observability
 - Kernel-level insights and telemetry
