@@ -1,0 +1,12 @@
+[
+  {
+    "name": "production-cluster",
+    "kubeconfigPath": "/path/to/production/kubeconfig",
+    "namespace": "nvidia-gpu-operator"
+  },
+  {
+    "name": "staging-cluster",
+    "kubeconfigPath": "/path/to/staging/kubeconfig",
+    "namespace": "nvidia-gpu-operator"
+  }
+]

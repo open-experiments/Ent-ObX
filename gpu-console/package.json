@@ -1,0 +1,14 @@
+{
+  "name": "gpu-console",
+  "version": "1.0.0",
+  "description": "Multi-cluster GPU monitoring dashboard",
+  "scripts": {
+    "start": "./run-servers.sh",
+    "dev": "./run-servers.sh",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

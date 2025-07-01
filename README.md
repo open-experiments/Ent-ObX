@@ -37,6 +37,11 @@ Welcome to the **ObX** collaborative experimental workspace. Our mission is to p
 - Advanced system-level observability
 - Kernel-level insights and telemetry
 
+### 5. GPU-Console
+[![eBPF](https://img.shields.io/badge/GPU-Console%20in%20Progress-green)](https://github.com/open-experiments/Ent-ObX/tree/main/gpu-console)
+**Status**: Work in Progress
+- Single Pane of Glass for GPU Resources & Their Consumption Levels
+
 ## Team
 Interested in cutting-edge observability and data engineering? Connect with our team!
 

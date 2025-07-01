@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  gpu-console:
+    build: .
+    ports:
+      - "3000:3000"  # Frontend
+      - "3001:3001"  # Backend API
+    volumes:
+      - ./config:/app/config
+      - ./kubeconfigs:/app/kubeconfigs:ro  # Mount kubeconfig files
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
