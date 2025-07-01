@@ -39,7 +39,7 @@ Welcome to the **ObX** collaborative experimental workspace. Our mission is to p
 - Kernel-level insights and telemetry
 
 ### 5. GPU-Console
-[![eBPF](https://img.shields.io/badge/GPU-Console%20in%20Progress-green)](https://github.com/open-experiments/Ent-ObX/tree/main/gpu-console)
+[![eBPF](https://img.shields.io/badge/GPU%20Dashboard-Single%20Pane%20of%20Glass-blueviolet?logo=nvidia&logoColor=white)](https://github.com/open-experiments/Ent-ObX/tree/main/gpu-console)
 **Status**: Work in Progress
 - Single Pane of Glass for GPU Resources & Their Consumption Levels
 
