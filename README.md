@@ -33,14 +33,13 @@ Welcome to the **ObX** collaborative experimental workspace. Our mission is to p
 
 ### 4. eBPF BlackBox Harvesting
 [![eBPF](https://img.shields.io/badge/eBPF-Instrumentation-darkgreen?logo=linux)](https://github.com/open-experiments/Ent-ObX/tree/main/ebpf-profiler)
-
-**Status**: Work in Progress
+**Focus**: Black-Box Data Harvesting in Kernel [Work in Progress]
 - Advanced system-level observability
 - Kernel-level insights and telemetry
 
 ### 5. GPU-Console
 [![eBPF](https://img.shields.io/badge/GPU%20Dashboard-Single%20Pane%20of%20Glass-blueviolet?logo=nvidia&logoColor=white)](https://github.com/open-experiments/Ent-ObX/tree/main/gpu-console)
-**Status**: Work in Progress
+**Focus**: Multi-Cluster GPU Resource Observability [Work in Progress]
 - Single Pane of Glass for GPU Resources & Their Consumption Levels
 
 ## Team
