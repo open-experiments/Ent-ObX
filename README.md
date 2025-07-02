@@ -9,7 +9,7 @@ Welcome to the **ObX** collaborative experimental workspace. Our mission is to p
 
 > 💡 **Platform Layer Observability**: For platform-level insights, please refer to the [OpenShift Observability Documentation](https://docs.openshift.com/container-platform/4.17/observability/overview/index.html)
 
-## Projects
+## Experiments
 
 ### 1. Python Instrumentation
 [![Python](https://img.shields.io/badge/Python-Instrumentation-blue?logo=python)](https://github.com/tme-osx/Telco-ObX/tree/main/python)
